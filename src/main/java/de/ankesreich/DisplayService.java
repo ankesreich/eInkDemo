@@ -31,7 +31,7 @@ public class DisplayService {
 
 
 	public Message getLastMessage() {
-		 List<Message> messages = messageRepository.findAll(Sort.by("datumCreation").descending());
+		 List<Message> messages = messageRepository.findAll(Sort.by("creationDate").descending());
 		 if(messages.size() > 0)
 		 {
 			 return messages.get(0);
