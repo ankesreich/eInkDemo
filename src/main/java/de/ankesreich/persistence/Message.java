@@ -10,25 +10,24 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
 @Entity
 @Table(name = "MESSAGE")
 public class Message {
-	
+
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	@Column(nullable = false, updatable = true, length = 100)
 	private String message;
 
 	@Column(nullable = false, updatable = true, length = 100)
 	private String author;
-	
+
 	@Column(nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date creationDate;
-	
+
 	public Message() {
 	}
 
@@ -38,14 +37,15 @@ public class Message {
 		this.creationDate = datumCreation;
 		this.message = message;
 	}
-	
+
 	public String getAuthor() {
 		return author;
 	}
+
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	
+
 	public Date getCreationDate() {
 		return creationDate;
 	}
@@ -57,6 +57,7 @@ public class Message {
 	public String getMessage() {
 		return message;
 	}
+
 	public void setMessage(String message) {
 		this.message = message;
 	}
@@ -66,6 +67,5 @@ public class Message {
 		return "Message [id=" + id + ", message=" + message + ", author=" + author + ", datumCreation=" + creationDate
 				+ "]";
 	}
-	
 
 }

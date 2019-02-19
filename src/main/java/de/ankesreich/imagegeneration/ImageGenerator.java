@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 public class ImageGenerator {
 
 	private static Logger log = Logger.getLogger(ImageGenerator.class.getName());
-	
+
 	public static File writeImageToFile(String fileName, String message) throws IOException {
 		MessageDisplayPanel panel = new MessageDisplayPanel(message);
 		addToJFrame(panel);
@@ -26,7 +26,7 @@ public class ImageGenerator {
 		frame.add(panel);
 		frame.pack();
 	}
-	
+
 	private static File createImageAndWrite(String file, MessageDisplayPanel panel) {
 		BufferedImage image = createImage(panel);
 		File output = new File(file + ".bmp");
@@ -37,15 +37,13 @@ public class ImageGenerator {
 		}
 		return output;
 	}
-	
+
 	private static BufferedImage createImage(MessageDisplayPanel panel) {
-		BufferedImage image = new BufferedImage(panel.getWidth(), 
-				panel.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+		BufferedImage image = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
 		Graphics2D g = image.createGraphics();
 		panel.printAll(g);
 		g.dispose();
 		return image;
 	}
-	
-	
+
 }
