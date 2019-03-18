@@ -48,7 +48,7 @@ By running the JUNIT test de.ankesreich.imagegeneration.MessageDisplayPanelTest 
 
 ## * running einkDemo headlessly
 JAVA Swing needs a running XServer, that means a gui must be running, to generate images which are then shown on the display.
-I solved this by disabling the running XServer and starting an own XServer xvfb. 
+I solved this by disabling the display manager (LightDM) in case of raspbian and starting an own headless XServer xvfb instead. 
 (if you have a better solution, please let me know.)
 
 ### disabling LightDM
