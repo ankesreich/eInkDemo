@@ -44,7 +44,7 @@ http://localhost:8080/einkdemo/h2-console
 A good idea then is to check the wiring. 
 
 ## Run test driver for image generation
-By running the JUNIT test de.ankesreich.imagegeneration.MessageDisplayPanelTest you can test the image generation.
+By running the JUNIT test de.ankesreich.imagegeneration.MessageDisplayPanelTest you can test the image generation on your local machine without the display.
 
 ## * running einkDemo headlessly
 JAVA Swing needs a running XServer, that means a gui must be running, to generate images which are then shown on the display.
